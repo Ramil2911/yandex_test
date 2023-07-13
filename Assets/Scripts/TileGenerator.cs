@@ -28,7 +28,7 @@ public class TileGenerator : MonoBehaviour
                 Random.Range(-generationHeight / 2, generationHeight / 2));
             Instantiate(boxPrefab, pos, Quaternion.identity, this.transform);
         }
-        for (var i = 0; i < Random.Range(0, maxStars + 1); i++)
+        for (var i = 0; i < Random.Range(1, maxStars + 1); i++)
         {
             var pos = transform.position + new Vector3(Random.Range(-generationWidth / 2, generationWidth / 2),
                 Random.Range(-generationHeight / 2, generationHeight / 2));

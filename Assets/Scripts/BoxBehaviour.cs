@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BoxBehaviour : MonoBehaviour
 {
@@ -8,7 +10,7 @@ public class BoxBehaviour : MonoBehaviour
     [SerializeField] private float timeToWait; // время ожидания
     void Start()
     {
-        StartCoroutine(Move(Random.Range(-1,1),Random.Range(timeToMove-1, timeToMove+1),
+        StartCoroutine(Move(Convert.ToBoolean(Random.Range(0,1)) ? 1 : -1,Random.Range(timeToMove-1, timeToMove+1),
             Random.Range(timeToWait-1,timeToWait+1))); //отсюда они до своего уничтожения двигаются
     }
 
